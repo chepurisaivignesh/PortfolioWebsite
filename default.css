@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  background-color: #000;
+}
+.empty {
+  height: 60vh;
+  background-color: #000;
+}
+h2 {
+  font-size: 6em;
+  font-weight: 500;
+  color: #222;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+h2 span {
+  transition: 1.5s;
+}
+h2:hover span:nth-child(1) {
+  margin-left: 10px;
+}
+h2:hover span:nth-child(1):after {
+  content: "EPURI \a    ~SAI~ \a ";
+  content: "EPURI SAI ";
+  white-space: pre-wrap;
+  text-align: center;
+}
+h2:hover span:nth-child(2) {
+  margin-right: 10px;
+}
+h2:hover span:nth-child(2):after {
+  content: "IGNESH";
+}
+h2:hover span {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff,
+    0 0 120px #fff;
+}
+.text {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  transform: skewY(350deg) translateY(-200px);
+  animation: animateColor 5s linear infinite;
+  z-index: 100;
+}
+.main {
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+}
+
+@keyframes animateColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.text h2 {
+  position: relative;
+  width: 100%;
+  font-size: 8em;
+  color: #fff;
+  pointer-events: none;
+  line-height: 1.2em;
+  white-space: nowrap;
+  text-shadow: calc(var(--x)) 100px 0 rbga(225, 225, 225, 0.1);
+  transform: translateX(calc(0% - var(--x) * var(--i)));
+}
+.text h2 span {
+  color: #0f0;
+  margin: 0 10px;
+}
+.text h2 span:nth-child(even) {
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+.footer {
+  background-color: #000;
+  width: 100%;
+  height: auto;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.bg {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+.card {
+  position: relative;
+  width: 600px;
+  height: 350px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.card .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card .circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d85831;
+  clip-path: circle(120px at center);
+  transition: 0.5s;
+}
+.card:hover .circle:before {
+  background: #413ed8;
+  clip-path: circle(400px at center);
+}
+.card img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.card:hover img {
+  left: 72%;
+  height: 500px;
+}
+.card .cardcontent {
+  position: relative;
+  width: 50%;
+  left: 20%;
+  padding: 20px 20px 20px 40px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.card:hover .cardcontent {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.card .cardcontent h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2em;
+  line-height: 1em;
+  margin-bottom: 10px;
+}
+.card .cardcontent p {
+  color: white;
+}
+@media (max-width: 991px) {
+  .card {
+    width: auto;
+    max-width: 350px;
+    align-items: flex-start;
+  }
+  .card:hover {
+    height: 600px;
+  }
+  .card .cardcontent {
+    width: 100%;
+    left: 0;
+    padding: 30px;
+  }
+  .card image-rendering {
+    top: 70%;
+    left: 50%;
+    height: 300px;
+  }
+}
+@media (max-width: 420px) {
+  .card .cardcontent {
+    padding: 20px;
+  }
+}
+.rainsec {
+  background: black;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+n {
+  position: absolute;
+  height: 12.5rem;
+  background: linear-gradient(transparent, #fff);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  animation: animate 5s linear infinite;
+}
+n:nth-child(3n + 1) {
+  background: linear-gradient(transparent, #0ff);
+}
+n:nth-child(3n + 2) {
+  background: linear-gradient(transparent, #0f0);
+}
+n:nth-child(3n + 3) {
+  background: linear-gradient(transparent, #f00);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-12.5rem);
+  }
+  100% {
+    transform: translateY(calc(100vh - 12.5rem));
+  }
+}
+
+ul{
+    position: relative;
+    top:50%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+ul li{
+    list-style: none;
+    margin: 0 2.5rem;
+}
+ul li a .fa{
+    font-size: 2.5rem;
+    color:rgb(43, 41, 41);
+    line-height: 5rem;
+    transition: 0.5s;
+}
+ul li a{
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    width: 5rem;
+    height: 5rem;
+    background: #fff;
+    border-width: 0rem;
+    justify-content: center;
+    transform: perspective(62.5rem) rotate(-30deg) skew(25deg) translate(0,0);
+    transition: 0.5s;
+    box-shadow: -1.25rem 1.25rem 0.625rem rgba(0,0,0,0.5);
+}
+ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0.625rem;
+    left: -1.25rem;
+    height: 100%;
+    width: 1.25rem;
+    background: #b1b1b1;
+    transition: 0.5s;
+    transform:rotate(0deg) skewY(-45deg);
+    border-width: 0rem;
+
+}
+ul li a:after{
+    content: '';
+    position: absolute;
+    bottom: -1.25rem;
+    left: -0.625rem;
+    height: 1.25rem;
+    width: 100%;
+    background: #b1b1b1;
+    transition: 0.5s;
+    transform:rotate(0deg) skewX(-45deg);
+    border-width: 0rem;
+
+}
+ul li a:hover{
+    transform: perspective(62.5rem) rotate(-30deg) skew(25deg) translate(1.25rem,-1.25rem);
+    box-shadow: -3.125rem 3.125rem 3.125rem rgba(255, 255, 255, 0.877);
+    border-width: 0rem;
+
+}
+ul li:hover .fa{
+    color: #fff;
+    border-width: 0rem;
+
+}
+ul li:hover:nth-child(1) a{
+    background: #3b5999;
+    border-width: 0rem;
+
+}
+ul li:hover:nth-child(1) a:before{
+    background: #2d4985;
+    border-width: 0rem;
+
+}
+ul li:hover:nth-child(1) a:after{
+    background: #4763a0;
+    border-width: 0rem;
+
+}
+
+ul li:hover:nth-child(2) a{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border-width: 0rem;
+
+}
+ul li:hover:nth-child(2) a:before{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border-width: 0rem;
+
+}
+ul li:hover:nth-child(2) a:after{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border-width: 0rem;
+
+}
+
+ul li:hover:nth-child(3) a{
+    background: #00acee;
+    border-width: 0rem;
+
+}
+ul li:hover:nth-child(3) a:before{
+    background: #00a1e0;
+    border-width: 0rem;
+
+}
+ul li:hover:nth-child(3) a:after{
+    background: #07b0f3;
+    border-width: 0rem;
+
+}
+ul li:hover:nth-child(4) a{
+    background: #171515;
+    border-width: 0rem;
+
+}
+ul li:hover:nth-child(4) a:before{
+    background: #131111;
+    border-width: 0rem;
+
+}ul li:hover:nth-child(4) a:after{
+    background: #222020;
+    border-width: 0rem;
+
+}
+ul li:hover:nth-child(5) a{
+    background: #0077b5;
+    border-width: 0rem;
+
+}
+ul li:hover:nth-child(5) a:before{
+    background: #026faa;
+    border-width: 0rem;
+   
+}ul li:hover:nth-child(5) a:after{
+    background: #0c89cc;
+    border-width: 0rem;
+
+}

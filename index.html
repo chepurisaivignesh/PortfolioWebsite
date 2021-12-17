@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="default.css" class="rel">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" > 
+    <title>CHV</title>
+</head>
+<body>
+    <div class="section1">
+    <h2><span>CH</span><span>V</span></h2>
+    </div>
+    <div class="bg">
+        <div class="card">
+            <div class="circle"></div>
+            <div class="cardcontent">
+                <h2>CHV</h2>
+                <p>Chemical Engineer by degree but techie by heart.</p>
+            </div>
+            <img src="Vignesh Name.png">
+        </div>
+    </div>
+    <div class="empty"></div>
+    <div class="main">
+        <div class="text">
+        <h2 style="--i:0.5">
+        <span>ChemE</span><span>Cricket</span><span>Python</span><span>Music</span><span>Movie</span>
+        <span>Valorant</span><span>Discord</span><span>Meta</span>
+        <span>ChemE</span><span>Python</span><span>Music</span><span>Cricket</span><span>Movie</span>
+        <span>Valorant</span><span>Discord</span><span>Meta</span>
+        </h2>
+        <h2 style="--i:1.5">
+        <span>Python</span><span>Music</span><span>Cricket</span><span>Movie</span>
+        <span>Valorant</span><span>Discord</span><span>Meta</span><span>ChemE</span>
+        <span>Python</span><span>Music</span><span>Cricket</span><span>Movie</span>
+        <span>Valorant</span><span>Discord</span><span>Meta</span><span>ChemE</span>
+        </h2>
+        <h2 style="--i:0.3">
+        <span>Music</span><span>Cricket</span><span>Movie</span>
+        <span>Valorant</span><span>Discord</span><span>Meta</span><span>ChemE</span><span>Python</span>
+        <span<span>Music</span><span>Cricket</span><span>Movie</span>
+        <span>Valorant</span><span>Discord</span><span>Meta</span><span>ChemE</span><span>Python</span>
+        </h2>
+        <h2 style="--i:2.5">
+        <span>Cricket</span><span>Movie</span>
+        <span>Valorant</span><span>Discord</span><span>Meta</span><span>ChemE</span><span>Python</span><span>Music</span>
+        <span>Cricket</span><span>Movie</span>
+        <span>Valorant</span><span>Discord</span><span>Meta</span><span>ChemE</span><span>Python</span><span>Music</span>
+        </h2>
+        <h2 style="--i:0.7">
+        <span>Movie</span>
+        <span>Valorant</span><span>Discord</span><span>Meta</span><span>ChemE</span><span>Python</span><span>Music</span><span>Cricket</span>
+        span>Movie</span>
+        <span>Valorant</span><span>Discord</span><span>Meta</span><span>ChemE</span><span>Python</span><span>Music</span><span>Cricket</span>
+        </h2>
+        </div>
+    </div>    
+    <div class="rainsec">
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/Janardhan.Suhasini.Siddesh" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/__sai_vignesh__/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/ChepuriVignesh" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="https://github.com/chepurisaivignesh" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/chepuri-sai-vignesh-15b788228/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </div>
+    
+    <script>
+        const position = document.documentElement;
+        position.addEventListener("mousemove",e =>{
+            position.style.setProperty('--x',e.clientX+'px');
+        })
+
+        function rain() {
+        let amount = 70;
+        let body = document.querySelector("div.rainsec");
+        let n = 0;
+        while (n < amount) {
+          let drop = document.createElement("n");
+
+          let size = Math.random() * 5;
+          let posX = Math.floor(Math.random() * window.innerWidth);
+          let delay = Math.random() * -20;
+          let duration = Math.random() * 5;
+
+          drop.style.width = 0.2 + size + 'px';
+          drop.style.left = posX + 'px';
+          drop.style.animationDelay = delay +'s';
+          drop.style.animationDuration = 1 + duration +"s";
+          body.appendChild(drop);
+          n++
+        }
+      }
+      rain();
+    </script>
+</body>
+</html>
